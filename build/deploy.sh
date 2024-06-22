@@ -1,7 +1,7 @@
 #!/bin/bash
 USERNAME=kalaiaadhav
 PASSWORD=AAdhav12@01
-SERVER_IP=your_server_ip
+SERVER_IP=3.86.45.66
 
 # Login to Docker Hub (assuming pushing to Docker Hub)
 docker login -u $USERNAME -p $PASSWORD
@@ -20,6 +20,6 @@ fi
 docker push $IMAGE_NAME
 
 # Deploy the image to the server (replace with your specific deployment command)
-#ssh $USERNAME@$SERVER_IP "docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
+#ssh $USERNAME@$3.86.45.66 "docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
 
 #echo "Image deployed to $1 environment."
