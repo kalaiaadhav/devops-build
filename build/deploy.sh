@@ -1,10 +1,7 @@
 #!/bin/bash
-USERNAME=kalaiaadhav
-PASSWORD=AAdhav12@01
-SERVER_IP=3.86.45.66
 
-# Login to Docker Hub (assuming pushing to Docker Hub)
-docker login -u $USERNAME -p $PASSWORD
+
+
 
 # Tag the image for the appropriate environment (dev or prod)
 if [ "$1" == "dev" ]; then
@@ -20,6 +17,6 @@ fi
 docker push $IMAGE_NAME
 
 # Deploy the image to the server (replace with your specific deployment command)
-#ssh $USERNAME@$3.86.45.66 "docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
+ssh -i "newkey01.pem" ubuntu@ec2-52-207-225-229.compute-1.amazonaws.com "docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
 
 #echo "Image deployed to $1 environment."
