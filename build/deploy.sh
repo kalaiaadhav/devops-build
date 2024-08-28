@@ -21,6 +21,6 @@ fi
 docker push $IMAGE_NAME
 
 # Deploy the image to the server (replace with your specific deployment command)
-ssh -i "newkey01.pem" ubuntu@ec2-34.229.158.73.compute-1.amazonaws.com"docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
+ssh -i "newkey01.pem" ubuntu@ec2-44-210-145-211.compute-1.amazonaws.com"docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
 
 echo "Image deployed to $1 environment."
