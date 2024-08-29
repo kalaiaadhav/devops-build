@@ -2,7 +2,7 @@
 # Replace with your credentials and server details
 USERNAME=kalaiaadhav
 PASSWORD=AAdhav12@01
-SERVER_IP=34.229.158.73
+SERVER_IP=3.88.222.149
 
 # Login to Docker Hub (assuming pushing to Docker Hub)
 docker login -u $USERNAME -p $PASSWORD
@@ -21,6 +21,6 @@ fi
 docker push $IMAGE_NAME
 
 # Deploy the image to the server (replace with your specific deployment command)
-ssh -i "newkey01.pem" ubuntu@ec2-44-210-145-211.compute-1.amazonaws.com"docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
+ssh -i "newkey01.pem" ubuntu@ec2-3-88-222-149.compute-1.amazonaws.com"docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
 
 echo "Image deployed to $1 environment."
