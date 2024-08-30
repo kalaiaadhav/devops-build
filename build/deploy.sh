@@ -15,6 +15,6 @@ docker login -u $USERNAME -p $PASSWORD
 docker push $IMAGE_NAME
 
 # Deploy the image to the server (replace with your specific deployment command)
-ssh -i "newkey01.pem" ubuntu@ec2-54-89-224-226.compute-1.amazonaws.com"docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
+ssh -i "C:\Users\Admin\Downloads\newkey01.pem" ubuntu@ec2-54-89-224-226.compute-1.amazonaws.com"docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
 
 echo "Image deployed to $1 environment."
