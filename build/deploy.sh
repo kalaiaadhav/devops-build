@@ -8,9 +8,9 @@ SERVER_IP=54.89.224.226
 docker login -u $USERNAME -p $PASSWORD
 
 # Tag the image for the appropriate environment (dev or prod)
-if [ "$1" == "dev" ]; then
+if [[ "$1" == "dev" ]]; then
   IMAGE_NAME=$IMAGE_NAME:dev
-elif [ "$1" == "prod" ]; then
+elif [[ "$1" == "prod" ]]; then
   IMAGE_NAME=$IMAGE_NAME:latest
 else
   echo "Invalid environment argument. Please specify 'dev' or 'prod'."
