@@ -8,14 +8,8 @@ SERVER_IP=54.89.224.226
 docker login -u $USERNAME -p $PASSWORD
 
 # Tag the image for the appropriate environment (dev or prod)
-if [[ "$1" == "dev" ]]; then
-  IMAGE_NAME=$IMAGE_NAME:dev
-elif [[ "$1" == "prod" ]]; then
+
   IMAGE_NAME=$IMAGE_NAME:latest
-else
-  echo "Invalid environment argument. Please specify 'dev' or 'prod'."
-  exit 1
-fi
 
 # Push the image to Docker Hub
 docker push $IMAGE_NAME
