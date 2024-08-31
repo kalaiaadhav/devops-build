@@ -1,20 +1,19 @@
 #!/bin/bash
-# Replace with your credentials and server details
-USERNAME=kalaiaadhav
-PASSWORD=AAdhav12@01
-SERVER_IP=54.89.224.226
 
-# Login to Docker Hub (assuming pushing to Docker Hub)
-docker login -u $USERNAME -p $PASSWORD
+# Set variables
+IMAGE_NAME="myapp"
+TAG="latest"
+PROD_REPO="kalaiaadhav/prod"
+SERVER_USER="ubuntu"
+SERVER_IP="server-ip"
 
-# Tag the image for the appropriate environment (dev or prod)
+# Pull the latest image from the production repository
+ssh $SERVER_USER@$SERVER_IP "docker pull $PROD_REPO:$TAG"
 
-  IMAGE_NAME=$IMAGE_NAME:latest
+# Stop and remove the existing container if it exists
+ssh $SERVER_USER@$SERVER_IP "docker stop $IMAGE_NAME || true"
+ssh $SERVER_USER@$SERVER_IP "docker rm $IMAGE_NAME || true"
 
-# Push the image to Docker Hub
-docker push $IMAGE_NAME
+# Run the new container
+ssh $SERVER_USER@$SERVER_IP "docker run -d --name $IMAGE_NAME -p 80:80 $PROD_REPO:$TAG"
 
-# Deploy the image to the server (replace with your specific deployment command)
-ssh -i "C:\Users\Admin\Downloads\newkey01.pem" ubuntu@ec2-54-89-224-226.compute-1.amazonaws.com"docker pull $IMAGE_NAME && docker stop <container_name> && docker rm <container_name> && docker run -d --name <container_name> $IMAGE_NAME"
-
-echo "Image deployed to $1 environment."
