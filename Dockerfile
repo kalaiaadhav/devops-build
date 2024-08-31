@@ -1,7 +1,9 @@
-FROM httpd:2.4-alpine
+
+FROM node:18-slim
 WORKDIR /app
 COPY package*.json ./
-RUN apk add --no-cache npm git 
-COPY /build/index.html /var/www/html/index.html
+RUN npm install
+COPY . .
 EXPOSE 80
-CMD ["httpd", "-D", "index.html"]
+CMD ["npm", "start"]
+
