@@ -1,11 +1,10 @@
-
-FROM node:18
+FROM node:18-alpine
 
 # Set the working directory
 WORKDIR /app
 
-# Update and install necessary packages
-RUN apt-get update && apt-get install -y npm git
+# Install npm and git using apk
+RUN apk add --no-cache npm git
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -21,4 +20,5 @@ EXPOSE 80
 
 # Start the application
 CMD ["npm", "start"]
+
 
