@@ -3,6 +3,7 @@
 # Set variables
 IMAGE_NAME="myapp"
 TAG="latest"
+echo "AAdhav12@01" | docker login -u kalaiaadhav --password-stdin
 PROD_REPO="kalaiaadhav/prod"
 SERVER_USER="ubuntu"
 SERVER_IP="ec2-18-212-2-17.compute-1.amazonaws.com"
