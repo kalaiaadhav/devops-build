@@ -3,7 +3,6 @@
 IMAGE_NAME="myapp"
 TAG="latest"
 DEV_REPO="kalaiaadhav/dev"
-
 # Build the Docker image
 docker build -t $IMAGE_NAME:$TAG .
 
