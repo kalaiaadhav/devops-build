@@ -5,7 +5,7 @@ IMAGE_NAME="myapp"
 TAG="latest"
 PROD_REPO="kalaiaadhav/prod"
 SERVER_USER="ubuntu"
-SERVER_IP="server-ip"
+SERVER_IP="ec2-18-212-2-17.compute-1.amazonaws.com"
 
 # Pull the latest image from the production repository
 ssh $SERVER_USER@$SERVER_IP "docker pull $PROD_REPO:$TAG"
