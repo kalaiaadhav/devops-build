@@ -3,7 +3,6 @@
 IMAGE_NAME="myapp"
 TAG="latest"
 echo "AAdhav12@01" | docker login -u kalaiaadhav --password-stdin
-
 DEV_REPO="kalaiaadhav/dev"
 # Build the Docker image
 docker build -t $IMAGE_NAME:$TAG .
