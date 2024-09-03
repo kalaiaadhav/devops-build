@@ -7,7 +7,7 @@ echo "AAdhav12@01" | docker login -u kalaiaadhav --password-stdin
 DEV_REPO="kalaiaadhav/dev"
 PROD_REPO="kalaiaadhav/prod"
 SERVER_USER="ubuntu"
-SERVER_IP="ec2-54-211-120-246.compute-1.amazonaws.com"
+SERVER_IP="ec2-52-91-46-240.compute-1.amazonaws.com"
 
 
 # Pull the latest image from the production repository
