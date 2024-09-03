@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Set variables
 IMAGE_NAME="myapp1"
 TAG="latest"
