@@ -10,7 +10,7 @@ RUN apk add --no-cache npm git
 COPY package*.json ./
 
 # Install dependencies
-#RUN npm install
+RUN npm install
 
 # Copy the rest of your application code
 COPY . .
