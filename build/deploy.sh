@@ -1,7 +1,7 @@
 #!/bin/bash
 # Set variables
-IMAGE_NAME="myapp3"
-TAG="latest"
+IMAGE_NAME="myapp17"
+TAG="latest4"
 echo "AAdhav12@01" | docker login -u kalaiaadhav --password-stdin
 DEV_REPO="kalaiaadhav/dev"
 SERVER_USER="ubuntu"
