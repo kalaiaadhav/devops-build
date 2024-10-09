@@ -1,7 +1,7 @@
 #!/bin/bash
 
-IMAGE_NAME="myapp_17"
-TAG="latest4"
+IMAGE_NAME="myapp_18"
+TAG="latest5"
 echo "AAdhav12@01" | docker login -u kalaiaadhav --password-stdin
 DEV_REPO="kalaiaadhav/dev"
 # Build the Docker image
