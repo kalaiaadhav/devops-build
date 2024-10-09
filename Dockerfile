@@ -8,7 +8,7 @@ RUN apk add --no-cache nodejs npm
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the container
-COPY package.json package-lock.json /app/
+COPY ./package.json ./package-lock.json /app/
 
 # Install dependencies
 RUN npm install
